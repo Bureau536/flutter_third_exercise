@@ -18,7 +18,7 @@ class ResultsScreen extends StatelessWidget {
       // loop body
       summary.add(
         {
-          'question_indez': i,
+          'question_index': i,
           'question': questions[i].text,
           'correct_answer': questions[i].answer[0],
           'user_answer': chosenAnswers[i],
