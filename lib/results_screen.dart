@@ -14,8 +14,8 @@ class ResultsScreen extends StatelessWidget {
 
   final List<String> chosenAnswers;
 
-  List<Map<String, Object>> getSummaryData() {
-    final List<Map<String, Object>> summary = [];
+  List<Map<String, dynamic>> getSummaryData() {
+    final List<Map<String, dynamic>> summary = [];
 
     for (var i = 0; i < chosenAnswers.length; i++) {
       // loop body
