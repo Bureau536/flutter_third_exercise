@@ -16,6 +16,7 @@ class QuestionsIdentifier extends StatelessWidget {
     return Container(
       height: 35,
       width: 35,
+      alignment: Alignment.center,
       margin: const EdgeInsets.only(right: 10, top: 5),
       decoration: BoxDecoration(
         color: isCorrect
