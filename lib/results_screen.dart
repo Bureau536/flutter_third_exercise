@@ -7,7 +7,10 @@ class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
     super.key,
     required this.chosenAnswers,
+    required this.restartQuiz,
   });
+
+  final void Function() restartQuiz;
 
   final List<String> chosenAnswers;
 
@@ -56,7 +59,14 @@ class ResultsScreen extends StatelessWidget {
             const SizedBox(height: 30),
             QuestionsSummary(summaryData),
             const SizedBox(height: 30),
-            TextButton(onPressed: () {}, child: const Text('Restart QUiz!'))
+            TextButton.icon(
+              onPressed: () {restartQuiz();},
+              style: TextButton.styleFrom(
+                foregroundColor: const Color.fromARGB(255, 201, 153, 251),
+              ),
+              icon: const Icon(Icons.refresh),
+              label: const Text('Restart Quiz!'),
+            ),
           ],
         ),
       ),
